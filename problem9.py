@@ -1,9 +1,9 @@
-a=333
-b=333
-c=334 # we have a starting point
+a=300
+b=400
+c=400 # we have a starting point
 
 
-while a**2 + b**2 != c**2: # while thhe numbers are not a pythagorean triple
+while a**2 + b**2 != c**2: # while the numbers are not a pythagorean triple
     if a**2 + b**2 > c**2: # if a and b are too high
         a -=1  # subtract 1 from a
         b -=1  # and 1 from b

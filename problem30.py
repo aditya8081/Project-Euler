@@ -1,26 +1,20 @@
-def Digitize(x):
+def Digitize(x):   # used this a lot as well. Nothing really more to say
     digits= []
-    digitVal=0
-    while 10** digitVal <= x:
-        digitVal +=1
-    xTemp = x
-    while digitVal >= 0:
-        placeVal = xTemp/(10**digitVal)
-        digits.append(int(placeVal))
-        xTemp= xTemp - (10**digitVal)*digits[len(digits)-1]
-        digitVal -=1
+    temp = str(x)
+    for y in temp:
+        digits.append(int(y))
     return digits
 
-def fifthSum(matrix):
-    sum=0
-    for y in range(0,len(matrix)):
-        sum += matrix[y]**5
+def fifthSum(matrix):  # this is a function that prints the sum of all digits to the 5th
+    sum=0 #start with sum = 0
+    for y in matrix: # and for every number in the list 
+        sum += y**5 # add it to the fifth to the running total
     return sum
 
-check = 0
+answer = 0
 
-for x in range(100,354294):  # the hightest value fot 9^5
-    if fifthSum(Digitize(x))==x:
-        check = check+x
+for x in range(100,354294):  # the hightest value fot 9^5 is the upper bound
+    if fifthSum(Digitize(x))==x: # if the fifth sum of the digits equals x
+        answer += x  # add x to the running total
 
-print check
+print answer # print the answer at the end

@@ -20,19 +20,8 @@ def nextPermutation(digits):
         j-=1
     return digits
 
-def facUnder(number):
-    product = 1
-    check = 0
-    step = 2
-    while product < number:
-        product *= step
-        step +=1
-        check = step
-    return check
-
-
-print facUnder(25)
 digits = [0,1,2,3,4,5,6,7,8,9]
-##for y in range(0,10):
-##    digits = nextPermutation(digits)
-##    print digits
+for y in range(1,1000000):
+    digits = nextPermutation(digits)
+
+print digits
